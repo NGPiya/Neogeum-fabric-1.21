@@ -1,0 +1,7 @@
+// 1.21	2024-08-15T17:43:42.3679438	Neogeum/World Gen
+00a370a4876f5a184f86fbc4e9c86c5ed1abffb2 data\neogeum\worldgen\placed_feature\neogeum_ore_placed.json
+56ee856bd7812449faf41a7020bcc1fe850f097a data\neogeum\worldgen\placed_feature\carruptium_ore_placed.json
+a4cf5e5a6c0b5d4b7bfeaf5bf035ac682450e0a2 data\neogeum\worldgen\placed_feature\rose_quartz_ore_placed.json
+5bbd8472dbe317b465270f22e00a27b9702666b3 data\neogeum\worldgen\configured_feature\neogeum_ore.json
+b3f536a9c14692d6b0d452cee1f4aa4e406f4b1b data\neogeum\worldgen\configured_feature\carruptium_ore.json
+b3f536a9c14692d6b0d452cee1f4aa4e406f4b1b data\neogeum\worldgen\configured_feature\rose_quartz_ore.json

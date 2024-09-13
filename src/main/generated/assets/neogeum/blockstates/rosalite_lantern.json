@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "neogeum:block/rosalite_lantern"
+    },
+    "hanging=true": {
+      "model": "neogeum:block/rosalite_lantern_hanging"
+    }
+  }
+}

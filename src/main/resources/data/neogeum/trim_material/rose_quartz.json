@@ -1,0 +1,12 @@
+{
+  "asset_name": "rose_quartz",
+  "description": {
+    "color": "#DD538C",
+    "translate": "trim_material.neogeum.rose_quartz"
+  },
+  "ingredient": "neogeum:rose_quartz",
+  "item_model_index": 0.95,
+  "override_armor_materials": {
+    "neogeum:rose_quartz": "rose_quartz_darker"
+  }
+}

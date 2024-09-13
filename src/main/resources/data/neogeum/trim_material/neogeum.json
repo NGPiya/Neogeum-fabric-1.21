@@ -1,0 +1,12 @@
+{
+  "asset_name": "neogeum",
+  "description": {
+    "color": "#54ADF8",
+    "translate": "trim_material.neogeum.neogeum"
+  },
+  "ingredient": "neogeum:neogeum_shard",
+  "item_model_index": 0.85,
+  "override_armor_materials": {
+    "neogeum:neogeum": "neogeum_darker"
+  }
+}

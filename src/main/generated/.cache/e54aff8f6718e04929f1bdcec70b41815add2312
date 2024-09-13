@@ -1,0 +1,12 @@
+// 1.21	2024-08-15T17:43:42.3685864	Neogeum/Tags for minecraft:item
+3e3ce213eafbdb80a76c0bee93bfc7231be4e9f0 data\minecraft\tags\item\enchantable\foot_armor.json
+9610232cde93d6bded69dee410bb7dc692cba8be data\minecraft\tags\item\enchantable\mining_loot.json
+e6cd97cd6c75fed63f96cdfd8cf858759644173b data\minecraft\tags\item\trimmable_armor.json
+e6cd97cd6c75fed63f96cdfd8cf858759644173b data\minecraft\tags\item\enchantable\armor.json
+f70844b608fb5d133342b6f11127617cc2d3c23a data\minecraft\tags\item\trim_materials.json
+62cada8a2958b6180c9c90f7c8c3c3541ecce36c data\minecraft\tags\item\enchantable\head_armor.json
+278071de29f4c5f8ad95c7518eb40796eea97261 data\minecraft\tags\item\enchantable\fire_aspect.json
+4e39d6b6c363a586b5ee776d697698e721fabb3d data\minecraft\tags\item\enchantable\durability.json
+278071de29f4c5f8ad95c7518eb40796eea97261 data\minecraft\tags\item\enchantable\sharp_weapon.json
+73fd4c70d486a74afd6b43f2b42b8af38185e3be data\minecraft\tags\item\trim_templates.json
+e6cd97cd6c75fed63f96cdfd8cf858759644173b data\minecraft\tags\item\enchantable\equippable.json

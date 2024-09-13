@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "neogeum:block/rosalite_pillar_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "neogeum:block/rosalite_pillar"
+    },
+    "axis=z": {
+      "model": "neogeum:block/rosalite_pillar_horizontal",
+      "x": 90
+    }
+  }
+}

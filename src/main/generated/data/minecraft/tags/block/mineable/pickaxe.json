@@ -1,0 +1,16 @@
+{
+  "values": [
+    "neogeum:neogeum_block",
+    "neogeum:neogeum_ore",
+    "neogeum:rose_quartz_block",
+    "neogeum:rose_quartz_ore",
+    "neogeum:carruptium_block",
+    "neogeum:carruptium_ore",
+    "neogeum:rosalite_block",
+    "neogeum:rosalite_pillar",
+    "neogeum:rosalite_stairs",
+    "neogeum:rosalite_slab",
+    "neogeum:rosalite_lantern",
+    "neogeum:rosalite_door"
+  ]
+}

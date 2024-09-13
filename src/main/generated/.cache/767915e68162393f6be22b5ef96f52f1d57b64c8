@@ -1,0 +1,4 @@
+// 1.21	2024-08-15T17:43:42.3675852	Neogeum/Tags for minecraft:block
+45a0308be96145a52a005043f54aac02e94beeac data\minecraft\tags\block\mineable\pickaxe.json
+7c8c7e32e5907de4387ee08922042d6f5083680c data\minecraft\tags\block\needs_diamond_tool.json
+b28a216d0554e72b067f56ae3cafa72d8a941fab data\minecraft\tags\block\needs_iron_tool.json

@@ -1,0 +1,10 @@
+{
+  "neo": {
+    "sounds": [
+      {
+        "name": "neogeum:neo",
+        "stream": true
+      }
+    ]
+  }
+}

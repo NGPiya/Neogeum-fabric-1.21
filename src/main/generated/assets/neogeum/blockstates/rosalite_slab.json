@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "neogeum:block/rosalite_slab"
+    },
+    "type=double": {
+      "model": "neogeum:block/rosalite_block"
+    },
+    "type=top": {
+      "model": "neogeum:block/rosalite_slab_top"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "neogeum:block/rosalite_block",
+    "side": "neogeum:block/rosalite_block",
+    "top": "neogeum:block/rosalite_block"
+  }
+}

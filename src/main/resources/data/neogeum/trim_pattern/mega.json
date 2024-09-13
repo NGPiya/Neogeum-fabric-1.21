@@ -1,0 +1,8 @@
+{
+  "asset_id": "neogeum:mega",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.neogeum.mega"
+  },
+  "template_item": "neogeum:mega_armor_trim_smithing_template"
+}

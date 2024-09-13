@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.2,
+  "group": "neogeum",
+  "ingredient": {
+    "item": "neogeum:neogeum_ore"
+  },
+  "result": {
+    "id": "neogeum:neogeum"
+  }
+}

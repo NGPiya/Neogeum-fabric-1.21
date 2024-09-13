@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "neogeum:rose_quartz_block"
+    }
+  },
+  "pattern": [
+    "A"
+  ],
+  "result": {
+    "count": 1,
+    "id": "neogeum:rose_quartz"
+  }
+}

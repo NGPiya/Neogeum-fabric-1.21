@@ -1,0 +1,20 @@
+{
+  "sources": [
+    {
+      "type": "paletted_permutations",
+      "textures": [
+        "trims/items/leggings_trim",
+        "trims/items/chestplate_trim",
+        "trims/items/helmet_trim",
+        "trims/items/boots_trim"
+      ],
+      "palette_key": "trims/color_palettes/trim_palette",
+      "permutations": {
+        "neogeum": "neogeum:trims/color_palettes/neogeum",
+        "neogeum_darker": "neogeum:trims/color_palettes/neogeum_darker",
+        "rose_quartz": "neogeum:trims/color_palettes/rose_quartz",
+        "rose_quartz_darker": "neogeum:trims/color_palettes/rose_quartz_darker"
+      }
+    }
+  ]
+}
