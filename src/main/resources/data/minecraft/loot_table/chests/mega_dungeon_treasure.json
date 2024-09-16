@@ -25,7 +25,7 @@
               "levels": {
                 "type": "minecraft:uniform",
                 "min": 15,
-                "max": 30
+                "max": 21
               },
               "options": "#minecraft:on_random_loot"
             }
@@ -42,7 +42,7 @@
               "levels": {
                 "type": "minecraft:uniform",
                 "min": 15,
-                "max": 30
+                "max": 21
               },
               "options": "#minecraft:on_random_loot"
             }
@@ -59,7 +59,7 @@
               "levels": {
                 "type": "minecraft:uniform",
                 "min": 15,
-                "max": 30
+                "max": 21
               },
               "options": "#minecraft:on_random_loot"
             }
@@ -76,7 +76,7 @@
               "levels": {
                 "type": "minecraft:uniform",
                 "min": 15,
-                "max": 30
+                "max": 21
               },
               "options": "#minecraft:on_random_loot"
             }
@@ -93,7 +93,7 @@
               "levels": {
                 "type": "minecraft:uniform",
                 "min": 15,
-                "max": 30
+                "max": 21
               },
               "options": "#minecraft:on_random_loot"
             }
@@ -110,7 +110,7 @@
               "levels": {
                 "type": "minecraft:uniform",
                 "min": 15,
-                "max": 30
+                "max": 21
               },
               "options": "#minecraft:on_random_loot"
             }
@@ -127,7 +127,7 @@
               "levels": {
                 "type": "minecraft:uniform",
                 "min": 15,
-                "max": 30
+                "max": 21
               },
               "options": "#minecraft:on_random_loot"
             }
@@ -144,7 +144,7 @@
               "levels": {
                 "type": "minecraft:uniform",
                 "min": 15,
-                "max": 30
+                "max": 21
               },
               "options": "#minecraft:on_random_loot"
             }
@@ -161,7 +161,7 @@
               "levels": {
                 "type": "minecraft:uniform",
                 "min": 15,
-                "max": 30
+                "max": 21
               },
               "options": "#minecraft:on_random_loot"
             }
@@ -218,14 +218,14 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:diamond",
-          "weight": 2,
+          "weight": 3,
           "functions": [
             {
               "function": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
-                "max": 5
+                "max": 3
               },
               "add": false
             }
@@ -250,14 +250,14 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:gold_ingot",
-          "weight": 15,
+          "weight": 20,
           "functions": [
             {
               "function": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 2,
-                "max": 7
+                "max": 5
               },
               "add": false
             }
@@ -266,7 +266,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:emerald",
-          "weight": 2,
+          "weight": 4,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -298,19 +298,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:saddle",
-          "weight": 3
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:iron_horse_armor"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:golden_horse_armor"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:diamond_horse_armor"
+          "weight": 6
         },
         {
           "type": "minecraft:item",
@@ -427,7 +415,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:iron_sword",
-          "weight": 10,
+          "weight": 20,
           "functions": [
             {
               "function": "minecraft:enchant_with_levels",
@@ -443,7 +431,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:iron_boots",
-          "weight": 10,
+          "weight": 20,
           "functions": [
             {
               "function": "minecraft:enchant_with_levels",
@@ -459,7 +447,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:iron_chestplate",
-          "weight": 10,
+          "weight": 20,
           "functions": [
             {
               "function": "minecraft:enchant_with_levels",
@@ -475,7 +463,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:iron_leggings",
-          "weight": 10,
+          "weight": 20,
           "functions": [
             {
               "function": "minecraft:enchant_with_levels",
@@ -491,7 +479,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:iron_helmet",
-          "weight": 10,
+          "weight": 20,
           "functions": [
             {
               "function": "minecraft:enchant_with_levels",
@@ -507,7 +495,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:iron_pickaxe",
-          "weight": 10,
+          "weight": 20,
           "functions": [
             {
               "function": "minecraft:enchant_with_levels",
@@ -523,7 +511,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:iron_shovel",
-          "weight": 10,
+          "weight": 20,
           "functions": [
             {
               "function": "minecraft:enchant_with_levels",

@@ -32,7 +32,14 @@
   "item.neogeum.rose_quartz_boots": "Rose quartz Boots",
 
 
-  "item.neogeum.megablaze_spawn_egg": "Megablaze spawn egg",
+  "item.neogeum.mega_armor_trim_smithing_template": "Smithing Template",
+  "trim_pattern.minecraft.mega": "Mega Armor Trim",
+  "trim_material.neogeum.neogeum": "Neogeum Material",
+  "trim_material.neogeum.rose_quartz": "Rose quartz Material",
+  "item.neogeum.neo_music_disc": "Music Disc",
+  "item.neogeum.neo_music_disc.desc": "Piya - Neo",
+
+
 
 
 
@@ -44,8 +51,15 @@
   "block.neogeum.rose_quartz_ore": "Rose quartz Ore",
   "block.neogeum.carruptium_block": "Carruptium Block",
   "block.neogeum.carruptium_ore": "Carruptium Ore",
-  "block.neogeum.milk_processor": "Milk Processor",
+  "block.neogeum.rosalite_block": "Rosalite Block",
+  "block.neogeum.rosalite_pillar": "Rosalite Pillar",
+  "block.neogeum.rosalite_stairs": "Rosalite Stairs",
+  "block.neogeum.rosalite_slab": "Rosalite Slab",
+  "block.neogeum.rosalite_lantern": "Rosalite Lantern",
+  "block.neogeum.rosalite_door": "Rosalite Door",
+  "block.neogeum.rosalite_trapdoor": "Rosalite Trapdoor",
+  "block.neogeum.rosalite_grate": "Rosalite Grate",
+  "block.neogeum.rosalite_lamp": "Rosalite Lamp",
 
-
-  "creativetab.neogeum": "Neogeum"
+  "itemgroup.neogeum": "Neogeum"
 }

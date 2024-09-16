@@ -4,6 +4,7 @@ import ch.piyamon.Neogeum;
 import ch.piyamon.block.custom.TomatoCropBlock;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
+import net.minecraft.block.enums.TrialSpawnerState;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -55,9 +56,7 @@ public class ModBlocks {
     public static final Block ROSALITE_GRATE = registerBlock("rosalite_grate",
             new GrateBlock(AbstractBlock.Settings.create().strength(3.0F, 6.0F).sounds(BlockSoundGroup.COPPER_GRATE).mapColor(MapColor.RAW_IRON_PINK).nonOpaque().requiresTool().allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
     public static final Block ROSALITE_LAMP = registerBlock("rosalite_lamp",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.OFF_WHITE).instrument(NoteBlockInstrument.HAT).strength(0.3F).sounds(BlockSoundGroup.GLASS).luminance(state -> 15).solidBlock(Blocks::never)
-            )
-    );
+            new Block(AbstractBlock.Settings.create().mapColor(MapColor.OFF_WHITE).instrument(NoteBlockInstrument.HAT).strength(0.3F).sounds(BlockSoundGroup.GLASS).luminance(state -> 15).solidBlock(Blocks::never)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

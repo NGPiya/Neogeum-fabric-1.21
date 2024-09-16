@@ -3,13 +3,13 @@
 	"id": "neogeum",
 	"version": "${version}",
 	"name": "Neogeum",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "oe oe oe",
 	"authors": [
-		"Me!"
+		"Piyamon, Oltab, Sweezy, Void"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "",
+		"sources": ""
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/neogeum/icon.png",

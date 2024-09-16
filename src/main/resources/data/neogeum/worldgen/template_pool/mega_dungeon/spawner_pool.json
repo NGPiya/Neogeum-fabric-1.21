@@ -1,5 +1,5 @@
 {
-  "name": "neogeum:mega_dungeon/loot_rooms",
+  "name": "neogeum:mega_dungeon/spawner_pool",
   "fallback": "minecraft:empty",
   "elements": [
     {
@@ -7,7 +7,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "neogeum:mega_dungeon/loot_rooms/treasure_room1",
+        "location": "neogeum:mega_dungeon/loot_rooms/spawner_slime",
         "override_liquid_settings": "ignore_waterlogging",
         "processors": "minecraft:empty"
       }
@@ -17,7 +17,17 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "neogeum:mega_dungeon/loot_rooms/treasure_room2",
+        "location": "neogeum:mega_dungeon/loot_rooms/spawner_zombie",
+        "override_liquid_settings": "ignore_waterlogging",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "neogeum:mega_dungeon/spawner/spawner_skeleton",
         "override_liquid_settings": "ignore_waterlogging",
         "processors": "minecraft:empty"
       }
