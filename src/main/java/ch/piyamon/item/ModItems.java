@@ -92,13 +92,8 @@ public class ModItems {
         return Registry.register(Registries.ITEM, Identifier.of(Neogeum.MOD_ID, name), item);
     }
 
-    private static void customIngredients(FabricItemGroupEntries entries) {
-        entries.add(NEOGEUM);
-    }
-
     public static void registerModItems() {
         Neogeum.LOGGER.info("Registering Mod Items for " + Neogeum.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::customIngredients);
     }
 }
