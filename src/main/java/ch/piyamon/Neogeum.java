@@ -42,6 +42,9 @@ public class Neogeum implements ModInitializer {
 		});
 		TradeOfferHelper.registerVillagerOffers(ModVillagers.CHEESEMAKER, 2, factories -> {
 			factories.add((entity, random) -> new TradeOffer(
+					new TradedItem(Items.DIAMOND, 6),
+					new ItemStack(ModItems.NEOGEUM, 19), 4, 1, 0.04f));
+			factories.add((entity, random) -> new TradeOffer(
 					new TradedItem(Items.EMERALD, 2),
 					new ItemStack(ModItems.CHEESE, 3), 16, 8, 0.04f));
 		});
