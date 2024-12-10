@@ -51,16 +51,6 @@
         "override_liquid_settings": "ignore_waterlogging",
         "processors": "minecraft:empty"
       }
-    },
-    {
-      "weight": 5,
-      "element": {
-        "element_type": "minecraft:single_pool_element",
-        "projection": "rigid",
-        "location": "neogeum:mega_dungeon/corridors/corridor1",
-        "override_liquid_settings": "ignore_waterlogging",
-        "processors": "minecraft:empty"
-      }
     }
   ]
 }
