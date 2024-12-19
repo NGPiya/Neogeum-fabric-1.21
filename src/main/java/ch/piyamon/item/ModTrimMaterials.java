@@ -1,60 +1,41 @@
 package ch.piyamon.item;
 
-import net.minecraft.item.*;
-import net.minecraft.item.trim.ArmorTrimMaterial;
-import net.minecraft.item.trim.ArmorTrimMaterials;
+import ch.piyamon.Neogeum;
+import net.minecraft.item.Item;
+import net.minecraft.item.Items;
+import net.minecraft.item.equipment.EquipmentModels;
+import net.minecraft.item.equipment.trim.ArmorTrimMaterial;
 import net.minecraft.registry.Registerable;
+import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
+import net.minecraft.text.TextColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
 
 import java.util.Map;
-import java.util.Optional;
 
-public class ModTrimMaterials extends ArmorTrimMaterials {
-    public static final RegistryKey<ArmorTrimMaterial> NEOGEUM = of("neogeum");
-    public static final RegistryKey<ArmorTrimMaterial> ROSEQUARTZ = of("rose_quartz");
+public class ModTrimMaterials {
+    public static final RegistryKey<ArmorTrimMaterial> NEOGEUM = RegistryKey.of(RegistryKeys.TRIM_MATERIAL,
+            Identifier.of(Neogeum.MOD_ID, "neogeum"));
+    public static final RegistryKey<ArmorTrimMaterial> ROSE_QUARTZ = RegistryKey.of(RegistryKeys.TRIM_MATERIAL,
+            Identifier.of(Neogeum.MOD_ID, "rose_quartz"));
 
-    public static void bootstrap(Registerable<ArmorTrimMaterial> registry) {
-        register(registry, NEOGEUM, ModItems.NEOGEUMSHARD, Style.EMPTY.withColor(5549560), 0.85F, Map.of(ModArmorMaterials.NEOGEUM_ARMOR_MATERIAL, "neogeum_darker"));
-        register(registry, ROSEQUARTZ, ModItems.ROSEQUARTZ, Style.EMPTY.withColor(14504844), 0.95F, Map.of(ModArmorMaterials.ROSE_QUARTZ_ARMOR_MATERIAL, "rose_quartz_darker"));
+
+    public static void bootstrap(Registerable<ArmorTrimMaterial> registerable) {
+        register(registerable, NEOGEUM, Registries.ITEM.getEntry(ModItems.NEOGEUM), Style.EMPTY.withColor(5549560), 0.85F, Map.of(ModArmorMaterials.NEOGEUM, "neogeum_darker"));
+        register(registerable, ROSE_QUARTZ, Registries.ITEM.getEntry(ModItems.ROSEQUARTZ), Style.EMPTY.withColor(TextColor.parse("5549560").getOrThrow()), 0.95F);
+        register(registerable, NEOGEUM, Registries.ITEM.getEntry(ModItems.NEOGEUM), Style.EMPTY.withColor(5549560), 0.85F, Map.of(EquipmentModels.DIAMOND, "diamond_darker"));
     }
 
-    public static Optional<RegistryEntry.Reference<ArmorTrimMaterial>> get(RegistryWrapper.WrapperLookup registriesLookup, ItemStack stack) {
-        return registriesLookup.getWrapperOrThrow(RegistryKeys.TRIM_MATERIAL)
-                .streamEntries()
-                .filter(recipe -> stack.itemMatches(((ArmorTrimMaterial)recipe.value()).ingredient()))
-                .findFirst();
-    }
+    private static void register(Registerable<ArmorTrimMaterial> registerable, RegistryKey<ArmorTrimMaterial> armorTrimKey,
+                                 RegistryEntry<Item> item, Style style, float itemModelIndex) {
+        ArmorTrimMaterial trimMaterial = new ArmorTrimMaterial(armorTrimKey.getValue().getPath(), item, itemModelIndex, Map.of(),
+                Text.translatable(Util.createTranslationKey("trim_material", armorTrimKey.getValue())).fillStyle(style));
 
-    private static void register(Registerable<ArmorTrimMaterial> registry, RegistryKey<ArmorTrimMaterial> key, Item ingredient, Style style, float itemModelIndex) {
-        register(registry, key, ingredient, style, itemModelIndex, Map.of());
-    }
-
-    private static void register(
-            Registerable<ArmorTrimMaterial> registry,
-            RegistryKey<ArmorTrimMaterial> key,
-            Item ingredient,
-            Style style,
-            float itemModelIndex,
-            Map<RegistryEntry<ArmorMaterial>, String> overrideArmorMaterials
-    ) {
-        ArmorTrimMaterial armorTrimMaterial = ArmorTrimMaterial.of(
-                key.getValue().getPath(),
-                ingredient,
-                itemModelIndex,
-                Text.translatable(Util.createTranslationKey("trim_material", key.getValue())).fillStyle(style),
-                overrideArmorMaterials
-        );
-        registry.register(key, armorTrimMaterial);
-    }
-
-    private static RegistryKey<ArmorTrimMaterial> of(String id) {
-        return RegistryKey.of(RegistryKeys.TRIM_MATERIAL, Identifier.ofVanilla(id));
+        registerable.register(armorTrimKey, trimMaterial);
     }
 }

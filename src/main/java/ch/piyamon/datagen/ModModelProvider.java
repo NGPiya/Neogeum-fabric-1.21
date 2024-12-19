@@ -1,15 +1,20 @@
 package ch.piyamon.datagen;
 
+import ch.piyamon.Neogeum;
 import ch.piyamon.block.ModBlocks;
 import ch.piyamon.block.custom.TomatoCropBlock;
 import ch.piyamon.item.ModItems;
+import com.nimbusds.openid.connect.sdk.federation.policy.operations.OneOfOperation;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 import net.minecraft.data.client.TexturedModel;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
+import net.minecraft.item.equipment.EquipmentModel;
+import net.minecraft.util.Identifier;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -55,16 +60,24 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CARRUPTIUM_PICKAXE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CARRUPTIUM_AXE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CARRUPTIUM_HOE, Models.GENERATED);
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.NEOGEUM_HELMET));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.NEOGEUM_CHESTPLATE));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.NEOGEUM_LEGGINGS));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.NEOGEUM_BOOTS));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.ROSEQUARTZ_HELMET));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.ROSEQUARTZ_CHESTPLATE));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.ROSEQUARTZ_LEGGINGS));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.ROSEQUARTZ_BOOTS));
+        itemModelGenerator.registerArmor(ModItems.NEOGEUM_HELMET, Identifier.of(Neogeum.MOD_ID, "neogeum"),
+                EquipmentModel.builder().addHumanoidLayers(Identifier.of(Neogeum.MOD_ID, "neogeum")).build(), EquipmentSlot.HEAD);
+        itemModelGenerator.registerArmor(ModItems.NEOGEUM_CHESTPLATE, Identifier.of(Neogeum.MOD_ID, "neogeum"),
+                EquipmentModel.builder().addHumanoidLayers(Identifier.of(Neogeum.MOD_ID, "neogeum")).build(), EquipmentSlot.CHEST);
+        itemModelGenerator.registerArmor(ModItems.NEOGEUM_LEGGINGS, Identifier.of(Neogeum.MOD_ID, "neogeum"),
+                EquipmentModel.builder().addHumanoidLayers(Identifier.of(Neogeum.MOD_ID, "neogeum")).build(), EquipmentSlot.LEGS);
+        itemModelGenerator.registerArmor(ModItems.NEOGEUM_BOOTS, Identifier.of(Neogeum.MOD_ID, "neogeum"),
+                EquipmentModel.builder().addHumanoidLayers(Identifier.of(Neogeum.MOD_ID, "neogeum")).build(), EquipmentSlot.FEET);
+        itemModelGenerator.registerArmor(ModItems.ROSEQUARTZ_HELMET, Identifier.of(Neogeum.MOD_ID, "perfect_rose_quartz"),
+                EquipmentModel.builder().addHumanoidLayers(Identifier.of(Neogeum.MOD_ID, "perfect_rose_quartz")).build(), EquipmentSlot.HEAD);
+        itemModelGenerator.registerArmor(ModItems.ROSEQUARTZ_CHESTPLATE, Identifier.of(Neogeum.MOD_ID, "perfect_rose_quartz"),
+                EquipmentModel.builder().addHumanoidLayers(Identifier.of(Neogeum.MOD_ID, "perfect_rose_quartz")).build(), EquipmentSlot.CHEST);
+        itemModelGenerator.registerArmor(ModItems.ROSEQUARTZ_LEGGINGS, Identifier.of(Neogeum.MOD_ID, "perfect_rose_quartz"),
+                EquipmentModel.builder().addHumanoidLayers(Identifier.of(Neogeum.MOD_ID, "perfect_rose_quartz")).build(), EquipmentSlot.LEGS);
+        itemModelGenerator.registerArmor(ModItems.ROSEQUARTZ_BOOTS, Identifier.of(Neogeum.MOD_ID, "perfect_rose_quartz"),
+                EquipmentModel.builder().addHumanoidLayers(Identifier.of(Neogeum.MOD_ID, "perfect_rose_quartz")).build(), EquipmentSlot.FEET);
         itemModelGenerator.register(ModItems.MEGA_ARMOR_TRIM_SMITHING_TEMPLATE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.NEOGEUMPOTATO, Models.GENERATED);
+        itemModelGenerator.register(ModItems.NEOGEUM_POTATO, Models.GENERATED);
         itemModelGenerator.register(ModItems.TOMATO, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHEESE, Models.GENERATED);
         itemModelGenerator.register(ModItems.NEO_MUSIC_DISC, Models.TEMPLATE_MUSIC_DISC);

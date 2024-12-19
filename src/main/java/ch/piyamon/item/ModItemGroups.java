@@ -43,7 +43,7 @@ public class ModItemGroups {
                         entries.add(ModItems.ROSEQUARTZ_LEGGINGS);
                         entries.add(ModItems.ROSEQUARTZ_BOOTS);
 
-                        entries.add(ModItems.NEOGEUMPOTATO);
+                        entries.add(ModItems.NEOGEUM_POTATO);
                         entries.add(ModItems.TOMATO);
                         entries.add(ModItems.TOMATO_SEEDS);
 

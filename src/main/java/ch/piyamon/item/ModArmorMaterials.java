@@ -1,42 +1,44 @@
 package ch.piyamon.item;
 
 import ch.piyamon.Neogeum;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterial;
-import net.minecraft.recipe.Ingredient;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.entry.RegistryEntry;
+import ch.piyamon.util.ModTags;
+import net.minecraft.item.equipment.ArmorMaterial;
+import net.minecraft.item.equipment.EquipmentModel;
+import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
 
 import java.util.EnumMap;
-import java.util.List;
-import java.util.function.Supplier;
+import java.util.Iterator;
+import java.util.Optional;
+import java.util.function.BiConsumer;
 
 public class ModArmorMaterials {
-    public static final RegistryEntry<ArmorMaterial> NEOGEUM_ARMOR_MATERIAL = registerArmorMaterial("neogeum",
-            () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
-                map.put(ArmorItem.Type.BOOTS, 4);
-                map.put(ArmorItem.Type.LEGGINGS, 7);
-                map.put(ArmorItem.Type.CHESTPLATE, 9);
-                map.put(ArmorItem.Type.HELMET, 4);
-                map.put(ArmorItem.Type.BODY, 11);
-            }), 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, () -> Ingredient.ofItems(ModItems.NEOGEUM),
-                    List.of(new ArmorMaterial.Layer(Identifier.of(Neogeum.MOD_ID, "neogeum"))), 0, 0));
-    public static final RegistryEntry<ArmorMaterial> ROSE_QUARTZ_ARMOR_MATERIAL = registerArmorMaterial("rose_quartz",
-            () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
-                map.put(ArmorItem.Type.BOOTS, 4);
-                map.put(ArmorItem.Type.LEGGINGS, 6);
-                map.put(ArmorItem.Type.CHESTPLATE, 8);
-                map.put(ArmorItem.Type.HELMET, 4);
-                map.put(ArmorItem.Type.BODY, 11);
-            }), 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, () -> Ingredient.ofItems(ModItems.PERFECTROSEQUARTZ),
-                    List.of(new ArmorMaterial.Layer(Identifier.of(Neogeum.MOD_ID, "rose_quartz"))), 0, 0));
+    public static final ArmorMaterial NEOGEUM_ARMOR_MATERIAL = new ArmorMaterial(500, (Util.make(new EnumMap<>(EquipmentType.class), map -> {
+                map.put(EquipmentType.BOOTS, 4);
+                map.put(EquipmentType.LEGGINGS, 7);
+                map.put(EquipmentType.CHESTPLATE, 9);
+                map.put(EquipmentType.HELMET, 4);
+                map.put(EquipmentType.BODY, 11);
+            })), 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0, 0, ModTags.ITEMS.NEOGEUM_REPAIR,
+                    Identifier.of(Neogeum.MOD_ID, "neogeum"));
 
+    public static final ArmorMaterial ROSE_QUARTZ_ARMOR_MATERIAL = new ArmorMaterial(500, (Util.make(new EnumMap<>(EquipmentType.class), map -> {
+        map.put(EquipmentType.BOOTS, 4);
+        map.put(EquipmentType.LEGGINGS, 6);
+        map.put(EquipmentType.CHESTPLATE, 8);
+        map.put(EquipmentType.HELMET, 4);
+        map.put(EquipmentType.BODY, 11);
+    })), 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0, 0, ModTags.ITEMS.ROSE_QUARTZ_REPAIR,
+            Identifier.of(Neogeum.MOD_ID, "perfect_rose_quartz"));
 
-    public static RegistryEntry<ArmorMaterial> registerArmorMaterial(String name, Supplier<ArmorMaterial> material) {
-        return Registry.registerReference(Registries.ARMOR_MATERIAL, Identifier.of(Neogeum.MOD_ID, name), material.get());
+    Identifier NEOGEUM = Identifier.ofVanilla("neogeum");
+
+    static void accept(BiConsumer<Identifier, EquipmentModel> equipmentModelBiConsumer) {
+        equipmentModelBiConsumer.accept(NEOGEUM, buildHumanoid("chainmail"));
+
+    private static EquipmentModel buildHumanoid(String path) {
+        return EquipmentModel.builder().addHumanoidLayers(Identifier.ofVanilla(path)).build();
     }
 }

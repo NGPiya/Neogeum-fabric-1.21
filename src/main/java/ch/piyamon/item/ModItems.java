@@ -8,84 +8,93 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
+import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.item.trim.ArmorTrimPatterns;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    public static final Item NEOGEUM = registerItem("neogeum", new Item(new Item.Settings()));
-    public static final Item NEOGEUMSHARD = registerItem("neogeum_shard", new Item(new Item.Settings()));
-    public static final Item ROSEQUARTZ = registerItem("rose_quartz", new Item(new Item.Settings()));
-    public static final Item PERFECTROSEQUARTZ = registerItem("perfect_rose_quartz", new Item(new Item.Settings()));
-    public static final Item CARRUPTIUM = registerItem("carruptium", new Item(new Item.Settings()));
-    public static final Item MEGA_ARMOR_TRIM_SMITHING_TEMPLATE = registerItem("mega_armor_trim_smithing_template", SmithingTemplateItem.of(ModTrimPatterns.MEGA));
+    public static final Item NEOGEUM = registerItem("neogeum", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "neogeum")))));
+    public static final Item NEOGEUMSHARD = registerItem("neogeum_shard", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "neogeum_shard")))));
+    public static final Item ROSEQUARTZ = registerItem("rose_quartz", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "rose_quartz")))));
+    public static final Item PERFECTROSEQUARTZ = registerItem("perfect_rose_quartz", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "perfect_rose_quartz")))));
+    public static final Item CARRUPTIUM = registerItem("carruptium", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "carruptium")))));
+    public static final Item MEGA_ARMOR_TRIM_SMITHING_TEMPLATE = registerItem("mega_armor_trim_smithing_template",
+            SmithingTemplateItem.of(new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "mega_armor_trim_smithing_template")))));
 
-    public static final Item NEOGEUM_SWORD = registerItem("neogeum_sword",
-            new SwordItem(ModToolMaterials.NEOGEUM,
-                    new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.NEOGEUM, 3, -2.4f))));
-    public static final Item NEOGEUM_PICKAXE = registerItem("neogeum_pickaxe",
-            new PickaxeItem(ModToolMaterials.NEOGEUM,
-                    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.NEOGEUM, 1, -2.8f))));
-    public static final Item NEOGEUM_SHOVEL = registerItem("neogeum_shovel",
-            new ShovelItem(ModToolMaterials.NEOGEUM,
-                    new Item.Settings().attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.NEOGEUM, 1.5f, -3.0f))));
-    public static final Item NEOGEUM_AXE = registerItem("neogeum_axe",
-            new AxeItem(ModToolMaterials.NEOGEUM,
-                    new Item.Settings().attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.NEOGEUM, 6, -3.2f))));
-    public static final Item NEOGEUM_HOE = registerItem("neogeum_hoe",
-            new HoeItem(ModToolMaterials.NEOGEUM,
-                    new Item.Settings().attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.CARRUPTIUM, -4, -3f))));
-    public static final Item CARRUPTIUM_SWORD = registerItem("carruptium_sword",
-            new SwordItem(ModToolMaterials.CARRUPTIUM,
-                    new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.CARRUPTIUM, 3, -2.4f))));
-    public static final Item CARRUPTIUM_PICKAXE = registerItem("carruptium_pickaxe",
-            new PickaxeItem(ModToolMaterials.CARRUPTIUM,
-                    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.CARRUPTIUM, 1, -2.8f))));
-    public static final Item CARRUPTIUM_SHOVEL = registerItem("carruptium_shovel",
-            new ShovelItem(ModToolMaterials.CARRUPTIUM,
-                    new Item.Settings().attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.CARRUPTIUM, 1.5f, -3.0f))));
-    public static final Item CARRUPTIUM_AXE = registerItem("carruptium_axe",
-            new AxeItem(ModToolMaterials.CARRUPTIUM,
-                    new Item.Settings().attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.CARRUPTIUM, 6, -3.2f))));
-    public static final Item CARRUPTIUM_HOE = registerItem("carruptium_hoe",
-            new HoeItem(ModToolMaterials.CARRUPTIUM,
-                    new Item.Settings().attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.CARRUPTIUM, -4, -3f))));
+    public static final Item NEOGEUM_SWORD = registerItem("neogeum_sword", new SwordItem(ModToolMaterials.NEOGEUM, 3, -2.4f, new Item.Settings()
+                            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "neogeum_sword")))));
+    public static final Item NEOGEUM_PICKAXE = registerItem("neogeum_pickaxe", new PickaxeItem(ModToolMaterials.NEOGEUM, 1, -2.8f, new Item.Settings()
+                            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "neogeum_pickaxe")))));
+    public static final Item NEOGEUM_SHOVEL = registerItem("neogeum_shovel", new ShovelItem(ModToolMaterials.NEOGEUM, 1.5f, -3.0f, new Item.Settings()
+                            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "neogeum_shovel")))));
+    public static final Item NEOGEUM_AXE = registerItem("neogeum_axe", new AxeItem(ModToolMaterials.NEOGEUM, 6, -3.2f, new Item.Settings()
+                            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "neogeum_axe")))));
+    public static final Item NEOGEUM_HOE = registerItem("neogeum_hoe", new HoeItem(ModToolMaterials.NEOGEUM, -4, -3f, new Item.Settings()
+                            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "neogeum_hoe")))));
+    public static final Item CARRUPTIUM_SWORD = registerItem("carruptium_sword", new SwordItem(ModToolMaterials.CARRUPTIUM, 3, -2.4f, new Item.Settings()
+                            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "carruptium_sword")))));
+    public static final Item CARRUPTIUM_PICKAXE = registerItem("carruptium_pickaxe", new PickaxeItem(ModToolMaterials.CARRUPTIUM, 1, -2.8f, new Item.Settings()
+                            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "carruptium_pickaxe")))));
+    public static final Item CARRUPTIUM_SHOVEL = registerItem("carruptium_shovel", new ShovelItem(ModToolMaterials.CARRUPTIUM, 1.5f, -3.0f, new Item.Settings()
+                            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "carruptium_shovel")))));
+    public static final Item CARRUPTIUM_AXE = registerItem("carruptium_axe", new AxeItem(ModToolMaterials.CARRUPTIUM, 6, -3.2f, new Item.Settings()
+                            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "carruptium_axe")))));
+    public static final Item CARRUPTIUM_HOE = registerItem("carruptium_hoe", new HoeItem(ModToolMaterials.CARRUPTIUM, -4, -3f, new Item.Settings()
+                            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "carruptium_hoe")))));
 
     public static final Item NEOGEUM_HELMET = registerItem("neogeum_helmet",
-            new ArmorItem(ModArmorMaterials.NEOGEUM_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
-                    .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(15))));
+            new ArmorItem(ModArmorMaterials.NEOGEUM_ARMOR_MATERIAL, EquipmentType.HELMET, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "neogeum_helmet")))));
     public static final Item NEOGEUM_CHESTPLATE = registerItem("neogeum_chestplate",
-            new ArmorItem(ModArmorMaterials.NEOGEUM_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
-                    .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(15))));
+            new ArmorItem(ModArmorMaterials.NEOGEUM_ARMOR_MATERIAL, EquipmentType.CHESTPLATE, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "neogeum_chestplate")))));
     public static final Item NEOGEUM_LEGGINGS = registerItem("neogeum_leggings",
-            new ArmorItem(ModArmorMaterials.NEOGEUM_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
-                    .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(15))));
+            new ArmorItem(ModArmorMaterials.NEOGEUM_ARMOR_MATERIAL, EquipmentType.LEGGINGS, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "neogeum_leggings")))));
     public static final Item NEOGEUM_BOOTS = registerItem("neogeum_boots",
-            new ArmorItem(ModArmorMaterials.NEOGEUM_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
-                    .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(15))));
+            new ArmorItem(ModArmorMaterials.NEOGEUM_ARMOR_MATERIAL, EquipmentType.BOOTS, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "neogeum_boots")))));
     public static final Item ROSEQUARTZ_HELMET = registerItem("rose_quartz_helmet",
-            new ModArmorItem(ModArmorMaterials.ROSE_QUARTZ_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
-                    .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(15))));
+            new ModArmorItem(ModArmorMaterials.ROSE_QUARTZ_ARMOR_MATERIAL, EquipmentType.HELMET, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "rose_quartz_helmet")))));
     public static final Item ROSEQUARTZ_CHESTPLATE = registerItem("rose_quartz_chestplate",
-            new ModArmorItem(ModArmorMaterials.ROSE_QUARTZ_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
-                    .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(15))));
+            new ModArmorItem(ModArmorMaterials.ROSE_QUARTZ_ARMOR_MATERIAL, EquipmentType.CHESTPLATE, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "rose_quartz_chestplate")))));
     public static final Item ROSEQUARTZ_LEGGINGS = registerItem("rose_quartz_leggings",
-            new ModArmorItem(ModArmorMaterials.ROSE_QUARTZ_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
-                    .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(15))));
+            new ModArmorItem(ModArmorMaterials.ROSE_QUARTZ_ARMOR_MATERIAL, EquipmentType.LEGGINGS, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "rose_quartz_leggings")))));
     public static final Item ROSEQUARTZ_BOOTS = registerItem("rose_quartz_boots",
-            new ModArmorItem(ModArmorMaterials.ROSE_QUARTZ_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
-                    .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(15))));
+            new ModArmorItem(ModArmorMaterials.ROSE_QUARTZ_ARMOR_MATERIAL, EquipmentType.BOOTS, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "rose_quartz_boots")))));
 
-    public static final Item NEOGEUMPOTATO = registerItem("neogeum_potato", new Item(new Item.Settings().food(ModFoodComponents.NEOGEUMPOTATO)));
-    public static final Item TOMATO = registerItem("tomato", new Item(new Item.Settings().food(ModFoodComponents.TOMATO)));
-    public static final Item CHEESE = registerItem("cheese", new Item(new Item.Settings().food(ModFoodComponents.CHEESE)));
+    public static final Item NEOGEUM_POTATO = registerItem("neogeum_potato", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "neogeum_potato")))
+            .food(ModFoodComponents.NEOGEUM_POTATO, ModFoodComponents.NEOGEUM_POTATO_EFFECT)));
+    public static final Item TOMATO = registerItem("tomato", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "tomato")))
+            .food(ModFoodComponents.TOMATO)));
+    public static final Item CHEESE = registerItem("cheese", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "cheese")))
+            .food(ModFoodComponents.CHEESE)));
 
     public static final Item TOMATO_SEEDS = registerItem("tomato_seeds",
-            new AliasedBlockItem(ModBlocks.TOMATO_CROP, new Item.Settings()));
+            new AliasedBlockItem(ModBlocks.TOMATO_CROP, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "tomato_seeds")))));
 
     public static final Item NEO_MUSIC_DISC = registerItem("neo_music_disc",
-            new Item(new Item.Settings().jukeboxPlayable(ModSounds.NEO_KEY).maxCount(1)));
+            new Item(new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Neogeum.MOD_ID, "neo_music_disc")))
+                    .jukeboxPlayable(ModSounds.NEO_KEY).maxCount(1)));
 
 
     private static Item registerItem(String name, Item item) {

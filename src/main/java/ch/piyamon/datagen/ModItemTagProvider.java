@@ -1,6 +1,7 @@
 package ch.piyamon.datagen;
 
 import ch.piyamon.item.ModItems;
+import ch.piyamon.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -91,5 +92,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.HEAD_ARMOR_ENCHANTABLE)
                 .add(ModItems.NEOGEUM_HELMET,
                         ModItems.ROSEQUARTZ_HELMET);
+
+        getOrCreateTagBuilder(ModTags.ITEMS.NEOGEUM_REPAIR)
+                .add(ModItems.NEOGEUM);
+        getOrCreateTagBuilder(ModTags.ITEMS.CARRUPTIUM_REPAIR)
+                .add(ModItems.CARRUPTIUM);
     }
 }
